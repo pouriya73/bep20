@@ -1,6 +1,3 @@
-
-
-
 pragma solidity 0.5.16;
 
 interface IBEP20 {
@@ -135,10 +132,10 @@ contract BEP20Token is Context, IBEP20, Ownable {
   string private _name;
 
   constructor() public {
-    _name = "Izakxyz";
-    _symbol = "IZX";
-    _decimals = 8;
-    _totalSupply = 100000000000000; //1,000,000 Tokens
+    _name = "cryptoZEOS";
+    _symbol = "CZS";
+    _decimals = 2;
+    _totalSupply = 10000000000; //100,000,000 Tokens
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -241,5 +238,3 @@ contract BEP20Token is Context, IBEP20, Ownable {
     _approve(account, _msgSender(), _allowances[account][_msgSender()].sub(amount, "BEP20: burn amount exceeds allowance"));
   }
 }
-
-
