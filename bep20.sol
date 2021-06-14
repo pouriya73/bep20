@@ -1,3 +1,6 @@
+
+
+
 pragma solidity 0.5.16;
 
 interface IBEP20 {
@@ -238,3 +241,5 @@ contract BEP20Token is Context, IBEP20, Ownable {
     _approve(account, _msgSender(), _allowances[account][_msgSender()].sub(amount, "BEP20: burn amount exceeds allowance"));
   }
 }
+
+
