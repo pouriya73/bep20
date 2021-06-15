@@ -136,6 +136,7 @@ contract BEP20Token is Context, IBEP20, Ownable {
     _symbol = "CZS";
     _decimals = 2;
     _totalSupply = 10000000000; //100,000,000 Tokens
+    // Token + Decimals(zero) = Total Supply
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
